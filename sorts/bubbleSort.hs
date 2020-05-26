@@ -4,7 +4,7 @@ listToSort = [13, 2, 3, 14, 17, 4, 1, 5, 16, 12, 9, 10, 15, 8, 7, 11, 18, 19, 6,
 
 -- The bubble sort function
 bubbleSort :: (Ord a) => [a] -> [a]
-bubbleSort lst = if bpassed == lst then lst 
+bubbleSort lst = if bpassed == lst then lst
                  else bubbleSort bpassed
                  where bpassed = bubblePass lst
 
@@ -18,4 +18,4 @@ bubblePass (x1:x2:xs) = if x1 > x2
 
 main = do
     putStrLn $ "Unsorted: " ++ show listToSort
-    putStrLn $ "Sorted: " ++ show (bubblePass listToSort)
+    putStrLn $ "Sorted: " ++ show (bubbleSort listToSort)
