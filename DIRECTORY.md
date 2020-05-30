@@ -7,4 +7,4 @@
 
 ## Project Euler
  * [Problem 1](https://github.com/TheAlgorithms/Haskell/blob/master/project_euler/Problem1/Problem1.hs)
- * [Problem 2](https://github.com/TheAlgorithms/Haskell/blob/master/project_euler/Problem1/Problem2.hs)
+ * [Problem 2](https://github.com/TheAlgorithms/Haskell/blob/master/project_euler/Problem2/Problem2.hs)
