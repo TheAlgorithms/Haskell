@@ -1,4 +1,4 @@
-solList = filter (\n -> (rem n 5 == 0) || (rem n 3 == 0)) [1..1000]
+solList = filter (\n -> (rem n 5 == 0) || (rem n 3 == 0)) [1..999]
 
 main = do
-    print solList
+    print $ sum solList
