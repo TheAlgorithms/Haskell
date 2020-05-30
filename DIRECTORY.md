@@ -4,3 +4,6 @@
 
 ## Robotics
  * [Complementary Filter](https://github.com/TheAlgorithms/Haskell/blob/master/robotics/ComplementaryFilter/compFilt.hs)
+
+## Project Euler
+ * [Problem 1]((https://github.com/TheAlgorithms/Haskell/blob/master/project_euler/Problem1/Problem1.hs)
