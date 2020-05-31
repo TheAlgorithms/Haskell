@@ -49,6 +49,9 @@ sampleTree = bstFromList [10, 7, 3, 11, 12, 1, 3, 2]
 --     y.key <= x.key. If y is a node in the right subtree of x then
 --     y.key >= x.key.
 --     Cormen, Thomas H., et al. Introduction to algorithms. MIT press, 2009.
--- isBST :: (Ord a, Eq a) => BTree a -> Bool
--- isBST (Node x l r) = (x >= (nodeKey l)) && (x <= (nodeKey r)) && (isBST l) && (isBST r)
---                      where condition1 = 
+isBST :: (Ord a, Eq a) => BTree a -> Bool
+isBST Empty = True
+isBST (Node x Empty Empty) = True
+isBST (Node x Empty r) = (x < (nkey r)) && (isBST r) where nkey = (\(Node n ll rr) -> n)
+isBST (Node x l Empty) = (x >= (nkey l)) && (isBST l) where nkey = (\(Node n ll rr) -> n)
+isBST (Node x l r) = (x >= (nkey l)) && (x < (nkey r)) && (isBST l) && (isBST r) where nkey = (\(Node n ll rr) -> n)
