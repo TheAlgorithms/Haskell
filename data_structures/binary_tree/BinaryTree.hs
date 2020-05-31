@@ -65,7 +65,6 @@ fromListInt i lst@(x:xs) = Node x (fromListInt (2*i + 1) (drop (i+1) lst))
 numNodes :: BTree a -> Int
 numNodes t = length $ bfsList t
 
-
 -- Pretty Print a Binary Tree
 simplePrint :: (Show a) => BTree a -> String
 simplePrint Empty = ""
