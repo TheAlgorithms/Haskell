@@ -8,6 +8,8 @@ nodeKey :: BTree a -> Maybe a
 nodeKey Empty = Nothing
 nodeKey (Node x _ _) = Just x
 
+-- Perform inorder walk of the binary search tree.
+-- -- Cormen, Thomas H., et al. Introduction to algorithms.  pg. 288, MIT press, 2009.
 inorderWalk :: (Eq a, Ord a) => BTree a -> [a]
 inorderWalk Empty = []
 inorderWalk (Node x l r) = (inorderWalk l) ++ [x] ++ (inorderWalk r)
@@ -19,6 +21,10 @@ bstInsert Empty z = Node z Empty Empty
 bstInsert (Node x l r) z
     | z < x = Node x (bstInsert l z) r
     | otherwise = Node x l (bstInsert r z)
+
+bstFromList :: (Eq a, Ord a) => [a] -> BTree a
+bstFromList [] = Empty
+bstFromList lst = foldl (\tree elem -> bstInsert tree elem) Empty lst
 
 -- Function to check if a given tree is a Binary Search Tree.
 -- Property: 
