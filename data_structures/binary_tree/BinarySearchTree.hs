@@ -8,6 +8,10 @@ nodeKey :: BTree a -> Maybe a
 nodeKey Empty = Nothing
 nodeKey (Node x _ _) = Just x
 
+inorderWalk :: (Eq a, Ord a) => BTree a -> [a]
+inorderWalk Empty = []
+inorderWalk (Node x l r) = (inorderWalk l) ++ [x] ++ (inorderWalk r)
+
 -- Function to insert a value into the tree. Returns the new tree.
 -- Cormen, Thomas H., et al. Introduction to algorithms.  pg. 294, MIT press, 2009.
 bstInsert :: (Eq a, Ord a) => BTree a -> a -> BTree a
