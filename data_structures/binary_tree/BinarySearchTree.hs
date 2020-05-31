@@ -9,7 +9,7 @@ nodeKey Empty = Nothing
 nodeKey (Node x _ _) = Just x
 
 -- Perform inorder walk of the binary search tree.
--- -- Cormen, Thomas H., et al. Introduction to algorithms.  pg. 288, MIT press, 2009.
+-- Cormen, Thomas H., et al. Introduction to algorithms.  pg. 288, MIT press, 2009.
 inorderWalk :: (Eq a, Ord a) => BTree a -> [a]
 inorderWalk Empty = []
 inorderWalk (Node x l r) = (inorderWalk l) ++ [x] ++ (inorderWalk r)
@@ -22,9 +22,26 @@ bstInsert (Node x l r) z
     | z < x = Node x (bstInsert l z) r
     | otherwise = Node x l (bstInsert r z)
 
+-- Function to find the maximum value in the BST.
+bstMax :: (Eq a, Ord a) => BTree a -> Maybe a
+bstMax Empty = Nothing
+bstMax (Node x Empty Empty) = Just x
+bstMax (Node x l Empty) = Just x
+bstMax (Node x l r) = bstMax r
+
+-- Function to find the minimum value in the BST.
+bstMin :: (Eq a, Ord a) => BTree a -> Maybe a
+bstMin Empty = Nothing
+bstMin (Node x Empty Empty) = Just x
+bstMin (Node x Empty r) = Just x
+bstMin (Node x l r) = bstMin l
+
+-- Function to build BST from a list of values using a fold.
 bstFromList :: (Eq a, Ord a) => [a] -> BTree a
 bstFromList [] = Empty
 bstFromList lst = foldl (\tree elem -> bstInsert tree elem) Empty lst
+
+sampleTree = bstFromList [10, 7, 3, 11, 12, 1, 3, 2]
 
 -- Function to check if a given tree is a Binary Search Tree.
 -- Property: 
