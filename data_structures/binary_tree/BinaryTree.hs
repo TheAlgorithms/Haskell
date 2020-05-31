@@ -47,6 +47,10 @@ getLevel level i (Node n l r)
 getLevels :: BTree a -> [[a]]
 getLevels t = takeWhile (\l -> (length l) > 0) [getLevel i 0 t | i <- [0..]]
 
+-- Get the depth of the tree
+getDepth :: BTree a -> Int
+getDepth t = length $ getLevels t
+
 -- Generate a Binary Tree from a list of values.
 -- Assume list is in breadth first order.
 fromList :: [a] -> BTree a
