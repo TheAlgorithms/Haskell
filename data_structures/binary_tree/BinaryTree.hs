@@ -61,12 +61,6 @@ fromListInt _ [] = Empty
 fromListInt i lst@(x:xs) = Node x (fromListInt (2*i + 1) (drop (i+1) lst)) 
                                   (fromListInt (2*i + 2) (drop (i+2) lst))
 
--- Append to left side of tree
--- appendLeft :: BTree a -> BTree a
--- Construct binary tree from a list of nodes and a specified set of sides.
--- fromNodesAndSides :: a -> [a] -> [Side] -> BTree a
--- fromNodesAndSides rt nodes sides = Node (head nodes) 
-
 -- Count number of nodes in the tree.
 numNodes :: BTree a -> Int
 numNodes t = length $ bfsList t
@@ -76,7 +70,3 @@ numNodes t = length $ bfsList t
 simplePrint :: (Show a) => BTree a -> String
 simplePrint Empty = ""
 simplePrint t = (nodeShow t) ++ " " ++ (simplePrint $ getLeftTree t) ++ (simplePrint $ getRightTree t)
-
--- Better Pretty Printing of the binary tree.
--- prettyPrint :: (Show a) => BTree a -> String
-
