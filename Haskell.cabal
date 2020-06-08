@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 9bef5ebd7df69b30ebfe5fcb2aa3c8e73a2285caeebe8057db70cdfaf8471a5a
+
+name:           Haskell
+version:        0.0.1
+homepage:       https://github.com/TheAlgorithms/Haskell#readme
+bug-reports:    https://github.com/TheAlgorithms/Haskell/issues
+author:         TheAlgorithms
+maintainer:     TheAlgorithms
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    LICENSE
+    package.yaml
+    README.md
+    stack.yaml
+
+source-repository head
+  type: git
+  location: https://github.com/TheAlgorithms/Haskell
+
+library
+  exposed-modules:
+      BinaryTree.BinarySearchTree
+      BinaryTree.BinaryTree
+      HaskellAlgorithms
+      ProjectEuler.Problem1.Problem1
+      ProjectEuler.Problem2.Problem2
+      Robotics.ComplementaryFilter.CompFilt
+      Robotics.ComplementaryFilter.TestData
+      Sorts.BubbleSort
+      Sorts.MergeSort
+      Sorts.QuickSort
+  other-modules:
+      Paths_Haskell
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base
+  default-language: Haskell2010
+
+test-suite Haskell-test-suite
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      SortSpecs.BubbleSortSpec
+  hs-source-dirs:
+      specs
+  ghc-options: -Wall -rtsopts -threaded -with-rtsopts=-N
+  build-depends:
+      Haskell
+    , QuickCheck
+    , base
+    , hspec
+  default-language: Haskell2010

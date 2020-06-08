@@ -1,0 +1,36 @@
+# This YAML file describes your package. Stack will automatically generate a
+# Cabal file when you run `stack build`. See the hpack website for help with
+# this file: <https://github.com/sol/hpack>.
+name: Haskell
+version: '0.0.1'
+github: "TheAlgorithms/Haskell"
+license: MIT
+author: "TheAlgorithms"
+maintainer: "TheAlgorithms"
+
+extra-source-files:
+- LICENSE
+- package.yaml
+- README.md
+- stack.yaml
+
+ghc-options: -Wall
+
+library:
+  dependencies:
+  - base
+  source-dirs: src
+
+tests:
+  Haskell-test-suite:
+    source-dirs: specs
+    main: Spec.hs
+    dependencies:
+    - base
+    - Haskell
+    - hspec
+    - QuickCheck
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
