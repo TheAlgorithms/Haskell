@@ -1,3 +1,5 @@
+module ProjectEuler.Problem2.Problem2 where
+
 fib :: Integer -> [Integer]
 fib n
     | n < 0 = []

@@ -1,4 +1,6 @@
-import TestData
+module Robotics.ComplementaryFilter.CompFilt where
+
+import Robotics.ComplementaryFilter.TestData
 
 -- Utility functions to extract X, Y, Z components from 3D vector.
 getX :: (a, a, a) -> a

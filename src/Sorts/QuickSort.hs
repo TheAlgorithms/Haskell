@@ -1,3 +1,5 @@
+module Sorts.QuickSort where
+
 listToSort :: [Int]
 listToSort = [13, 2, 3, 14, 17, 4, 1, 5, 16, 12, 9, 10, 15, 8, 7, 11, 18, 19, 6, 20]
 

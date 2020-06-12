@@ -1,4 +1,4 @@
-module BinaryTree where
+module BinaryTree.BinaryTree where
 
 import qualified Data.List as L
 

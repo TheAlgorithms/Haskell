@@ -1,4 +1,4 @@
-module BinarySearchTree where
+module BinaryTree.BinarySearchTree where
 
 data BTree a = Empty | Node a (BTree a) (BTree a) deriving (Show)
 data Side = LeftSide | RightSide deriving (Eq, Show)
