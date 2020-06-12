@@ -1,9 +1,9 @@
 ## Sorts
- * [Bubble Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/bubbleSort.hs)
- * [Merge Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/mergeSort.hs)
+ * [Bubble Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/BubbleSort.hs)
+ * [Merge Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/MergeSort.hs)
 
 ## Robotics
- * [Complementary Filter](https://github.com/TheAlgorithms/Haskell/blob/master/src/Robotics/ComplementaryFilter/compFilt.hs)
+ * [Complementary Filter](https://github.com/TheAlgorithms/Haskell/blob/master/src/Robotics/ComplementaryFilter/CompFilt.hs)
 
 ## Project Euler
  * [Problem 1](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem1/Problem1.hs)
