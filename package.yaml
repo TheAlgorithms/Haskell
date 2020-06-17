@@ -19,6 +19,7 @@ ghc-options: -Wall
 library:
   dependencies:
   - base
+  - sort
   source-dirs: src
 
 tests:
