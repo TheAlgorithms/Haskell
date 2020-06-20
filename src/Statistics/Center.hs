@@ -15,8 +15,8 @@ harmonicMean vals = (sum $ map (1/) vals)/(fromIntegral $ length vals)
 
 median :: (Fractional a, Ord a) => [a] -> a
 median vals = if odd n 
-              then head $ drop mid vals 
-              else arithmeticMean $ take 2 $ drop (mid-1) vals
+              then head $ drop mid sortedVals 
+              else arithmeticMean $ take 2 $ drop (mid-1) sortedVals
     where sortedVals = (S.sort vals)
           n = length vals
           mid = n `div` 2 
