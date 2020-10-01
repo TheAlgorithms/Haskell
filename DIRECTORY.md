@@ -2,6 +2,7 @@
  * [Bubble Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/BubbleSort.hs)
  * [Merge Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/MergeSort.hs)
  * [Quick Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/QuickSort.hs)
+ * [Insertion Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/InsertionSort.hs)
 
 ## Robotics
  * [Complementary Filter](https://github.com/TheAlgorithms/Haskell/blob/master/src/Robotics/ComplementaryFilter/CompFilt.hs)
