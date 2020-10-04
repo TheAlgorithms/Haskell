@@ -20,6 +20,7 @@ library:
   dependencies:
   - base
   - sort
+  - containers
   source-dirs: src
 
 tests:
@@ -31,6 +32,7 @@ tests:
     - Haskell
     - hspec
     - QuickCheck
+    - containers
     ghc-options:
     - -rtsopts
     - -threaded
