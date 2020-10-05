@@ -10,11 +10,14 @@
 ## Project Euler
  * [Problem 1](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem1/Problem1.hs)
  * [Problem 2](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem2/Problem2.hs)
- 
+
 ## Statistics
  * [Center](https://github.com/TheAlgorithms/Haskell/blob/master/src/Statistics/Center.hs)
  * [Dispersion](https://github.com/TheAlgorithms/Haskell/blob/master/src/Statistics/Dispersion.hs)
- 
+
 ## BinaryTree
  * [Binary Tree](https://github.com/TheAlgorithms/Haskell/blob/master/src/BinaryTree/BinaryTree.hs)
  * [Binary Search Tree](https://github.com/TheAlgorithms/Haskell/blob/master/src/BinaryTree/BinarySearchTree.hs)
+
+## Graph
+ * [Directed Graph](https://github.com/TheAlgorithms/Haskell/blob/master/src/Graph/DirectedGraph.hs)
