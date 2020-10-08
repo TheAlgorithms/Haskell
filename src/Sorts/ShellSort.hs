@@ -1,8 +1,6 @@
 module Sorts.ShellSort where
-
-
-listToSort :: [Int]
-listToSort = [13, 2, 3, 14, 17, 4, 1, 5, 16, 12, 9, 10, 15, 8, 7, 11, 18, 19, 6, 20]
+-- Shell sort uses insertion sort for sorting individual sublists
+import Sorts.InsertionSort
 
 -- Produces the sequence of gaps to use for sorting a list of size n
 gaps :: Int -> [Int]
@@ -45,22 +43,6 @@ combine [] = []
 combine l@(xs:_)
         | length xs == 0 = []
         | otherwise = [x | (x:_) <- l] ++ combine (map (drop 1) l)
-
---
--- Shell sort uses insertion sort for sorting individual sublists
--- All code below taken from Sorts.InsertionSort
---
-insertionSort:: (Ord a) => [a] -> [a]
-insertionSort [] = [] -- Empty list is empty
-insertionSort [x] = [x] -- Singleton lists are trivially sorted.
-insertionSort (x:xs) = insert x (insertionSort xs)
-
--- Assumes that the second argument is an alread-sorted list,
--- and inserts the first argument in the appropriate position
-insert :: (Ord a) => a -> [a] -> [a]
-insert x [] = [x]
-insert x lst@(y:ys) = if x <= y then x:lst else y:(insert x ys)
-
 
 main :: IO ()
 main = do
