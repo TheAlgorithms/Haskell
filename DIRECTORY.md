@@ -4,6 +4,7 @@
  * [Quick Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/QuickSort.hs)
  * [Insertion Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/InsertionSort.hs)
  * [Shell Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/ShellSort.hs)
+ * [Heap Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/HeapSort.hs)
 
 ## Robotics
  * [Complementary Filter](https://github.com/TheAlgorithms/Haskell/blob/master/src/Robotics/ComplementaryFilter/CompFilt.hs)
