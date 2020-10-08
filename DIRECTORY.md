@@ -10,6 +10,9 @@
 ## Project Euler
  * [Problem 1](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem1/Problem1.hs)
  * [Problem 2](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem2/Problem2.hs)
+ * [Problem 3](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem3/Problem3.hs)
+ * [Problem 4](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem4/Problem4.hs)
+ * [Problem 5](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem5/Problem5.hs)
 
 ## Statistics
  * [Center](https://github.com/TheAlgorithms/Haskell/blob/master/src/Statistics/Center.hs)
