@@ -21,3 +21,6 @@
 
 ## Graph
  * [Directed Graph](https://github.com/TheAlgorithms/Haskell/blob/master/src/Graph/DirectedGraph.hs)
+
+## SpecializedStructure
+ * [Merge-Find Set](https://github.com/TheAlgorithms/Haskell/blob/master/src/SpecializedStructure/MergeFindSet.hs)
