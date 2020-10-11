@@ -21,6 +21,8 @@ library:
   - base
   - sort
   - containers
+  - vector
+  - vector-algorithms
   source-dirs: src
 
 tests:
