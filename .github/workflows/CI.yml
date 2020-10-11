@@ -42,5 +42,3 @@ jobs:
       run: stack test
     - name: Run benchmarks
       run: stack bench
-    - name: Generate tarball
-      run: stack sdist
