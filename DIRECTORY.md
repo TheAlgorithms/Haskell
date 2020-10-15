@@ -3,7 +3,8 @@
  * [Insertion Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/InsertionSort.hs)
  * [Merge Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/MergeSort.hs)
  * [Quick Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/QuickSort.hs)
- * [Selection Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/SelectionSort.hs)
+ * [Insertion Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/InsertionSort.hs)
+ * [Shell Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/ShellSort.hs)
 
 ## Robotics
  * [Complementary Filter](https://github.com/TheAlgorithms/Haskell/blob/master/src/Robotics/ComplementaryFilter/CompFilt.hs)
