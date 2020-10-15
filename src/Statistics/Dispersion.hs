@@ -2,11 +2,11 @@ module Statistics.Dispersion where
 
 import Statistics.Center
 
-variance :: (Fractional a) => [a] -> a
-variance vals = (sum $ zipWith (*) deviations deviations)/n
+variance :: (Foldable t, Functor t, Fractional a) => t a -> a
+variance vals = (sum $ fmap (\x -> x * x) deviations) / n
     where n = (fromIntegral $ length vals)
           mu = arithmeticMean vals
-          deviations = map (\x -> x-mu) vals
+          deviations = fmap (\x -> x-mu) vals
 
-stdev :: (Floating a) => [a] -> a
+stdev :: (Foldable t, Functor t, Floating a) => t a -> a
 stdev vals = sqrt $ variance vals
