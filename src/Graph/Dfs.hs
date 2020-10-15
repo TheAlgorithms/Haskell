@@ -1,3 +1,5 @@
+module Graph.Dfs where
+
 import Data.List
 
 type Node = Int
