@@ -1,3 +1,5 @@
+module Maths.GraphDist where
+
 -- calculates the distance from the origin
 calcDistOrigin :: Floating a => a -> a -> a -> a
 calcDistOrigin x y z = sqrt ((x ** 2) + (y ** 2) + (z ** 2))
