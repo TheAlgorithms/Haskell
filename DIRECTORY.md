@@ -10,6 +10,11 @@
 ## Robotics
  * [Complementary Filter](https://github.com/TheAlgorithms/Haskell/blob/master/src/Robotics/ComplementaryFilter/CompFilt.hs)
 
+## Maths
+
+* [GraphDist](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths.GraphDist.hs)
+* [Palindrome](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths.Palindrome.hs)
+
 ## Project Euler
  * [Problem 1](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem1/Problem1.hs)
  * [Problem 2](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem2/Problem2.hs)
