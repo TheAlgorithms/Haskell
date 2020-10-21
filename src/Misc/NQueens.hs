@@ -1,3 +1,4 @@
+module Misc.NQueens where
 {-
 The n-Queens search is a backtracking algorithm. The n-Queens problem fits n 
 number of Queens onto a Chess board. As only one Queen can fit per row, a 
