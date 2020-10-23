@@ -1,0 +1,44 @@
+name: CI (Stack)
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+    types: [opened, synchronize]
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  test_with_stack:
+    name: Testing with Stack-${{ matrix.stack }}, on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        stack: ["2.3.1"]
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-haskell@v1.1.3
+      with:
+        ghc-version: ${{ matrix.ghc }}
+        stack-version: ${{ matrix.stack }}
+    - name: Cache (Unix platform)
+      uses: actions/cache@v2
+      with:
+        path: ~/.stack
+        key: stack-cache-${{ runner.os }}-${{ hashFiles('stack.yaml.lock') }}-${{ hashFiles('stack.yaml') }}
+        restore-keys: |
+          stack-cache-${{ runner.os }}-${{ hashFiles('stack.yaml.lock') }}
+          stack-cache-${{ runner.os }}
+    - name: Install dependencies
+      run: |
+        stack update
+        stack build --system-ghc --only-dependencies --test --bench --no-run-tests --no-run-benchmarks
+    - name: Build
+      run: stack build --system-ghc --test --bench --no-run-tests --no-run-benchmarks
+    - name: Run tests
+      run: stack test
+    - name: Run benchmarks
+      run: stack bench
