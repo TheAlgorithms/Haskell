@@ -1,3 +1,5 @@
+module Misc.BinarySearch where
+
 bsWithIndex :: (Ord a) => [a] -> a -> Int -> Maybe Int
 bsWithIndex list n i
     | n == head list        = Just i
