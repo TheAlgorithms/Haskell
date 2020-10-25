@@ -39,4 +39,4 @@
  * [Merge-Find Set](https://github.com/TheAlgorithms/Haskell/blob/master/src/SpecializedStructure/MergeFindSet.hs)
 
  ## Misc
- * [Binary Search](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/IntBinarySearch.hs)
+ * [Binary Search](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/BinarySearch.hs)
