@@ -37,3 +37,6 @@
 
 ## SpecializedStructure
  * [Merge-Find Set](https://github.com/TheAlgorithms/Haskell/blob/master/src/SpecializedStructure/MergeFindSet.hs)
+
+ ## Data Structures
+ * [Max Heap](https://github.com/TheAlgorithms/Haskell/blob/master/src/DataStructures/MaxHeap.hs)
