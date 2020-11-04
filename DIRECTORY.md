@@ -40,3 +40,6 @@
 
  ## Data Structures
  * [Max Heap](https://github.com/TheAlgorithms/Haskell/blob/master/src/DataStructures/MaxHeap.hs)
+
+ ## Misc
+ * [Binary Search](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/BinarySearch.hs)
