@@ -34,6 +34,7 @@
 
 ## Graph
  * [Directed Graph](https://github.com/TheAlgorithms/Haskell/blob/master/src/Graph/DirectedGraph.hs)
+ * [Dfs](https://github.com/TheAlgorithms/Haskell/blob/master/src/Graph/Dfs.hs)
 
 ## SpecializedStructure
  * [Merge-Find Set](https://github.com/TheAlgorithms/Haskell/blob/master/src/SpecializedStructure/MergeFindSet.hs)
@@ -43,3 +44,6 @@
 
  ## Misc
  * [Binary Search](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/BinarySearch.hs)
+ * [NQueens](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/NQueens.hs)
+ * [Powerset](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/Powerset.hs)
+ * [TowersOfHanoi](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/TowersOfHanoi.hs)
