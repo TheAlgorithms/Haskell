@@ -1,49 +1,65 @@
-## Sorts
- * [Bubble Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/BubbleSort.hs)
- * [Insertion Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/InsertionSort.hs)
- * [Merge Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/MergeSort.hs)
- * [Quick Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/QuickSort.hs)
- * [Insertion Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/InsertionSort.hs)
- * [Shell Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/ShellSort.hs)
- * [Heap Sort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/HeapSort.hs)
+# List of all files
 
-## Robotics
- * [Complementary Filter](https://github.com/TheAlgorithms/Haskell/blob/master/src/Robotics/ComplementaryFilter/CompFilt.hs)
+## [Setup](https://github.com/TheAlgorithms/Haskell/blob/master//Setup.hs)
 
-## Maths
+## Specs
+  * Sortspecs
+    * [Bubblesortspec](https://github.com/TheAlgorithms/Haskell/blob/master/specs/SortSpecs/BubbleSortSpec.hs)
+    * [Heapsortspec](https://github.com/TheAlgorithms/Haskell/blob/master/specs/SortSpecs/HeapSortSpec.hs)
+    * [Insertionsortspec](https://github.com/TheAlgorithms/Haskell/blob/master/specs/SortSpecs/InsertionSortSpec.hs)
+    * [Mergesortspec](https://github.com/TheAlgorithms/Haskell/blob/master/specs/SortSpecs/MergeSortSpec.hs)
+    * [Quicksortspec](https://github.com/TheAlgorithms/Haskell/blob/master/specs/SortSpecs/QuickSortSpec.hs)
+    * [Selectionsortspec](https://github.com/TheAlgorithms/Haskell/blob/master/specs/SortSpecs/SelectionSortSpec.hs)
+    * [Shellsortspec](https://github.com/TheAlgorithms/Haskell/blob/master/specs/SortSpecs/ShellSortSpec.hs)
+  * [Spec](https://github.com/TheAlgorithms/Haskell/blob/master/specs/Spec.hs)
 
-* [GraphDist](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths.GraphDist.hs)
-* [Palindrome](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths.Palindrome.hs)
-
-## Project Euler
- * [Problem 1](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem1/Problem1.hs)
- * [Problem 2](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem2/Problem2.hs)
- * [Problem 3](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem3/Problem3.hs)
- * [Problem 4](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem4/Problem4.hs)
- * [Problem 5](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem5/Problem5.hs)
- * [Problem 6](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem6/Problem6.hs)
- * [Problem 7](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem7/Problem7.hs)
-
-## Statistics
- * [Center](https://github.com/TheAlgorithms/Haskell/blob/master/src/Statistics/Center.hs)
- * [Dispersion](https://github.com/TheAlgorithms/Haskell/blob/master/src/Statistics/Dispersion.hs)
-
-## BinaryTree
- * [Binary Tree](https://github.com/TheAlgorithms/Haskell/blob/master/src/BinaryTree/BinaryTree.hs)
- * [Binary Search Tree](https://github.com/TheAlgorithms/Haskell/blob/master/src/BinaryTree/BinarySearchTree.hs)
-
-## Graph
- * [Directed Graph](https://github.com/TheAlgorithms/Haskell/blob/master/src/Graph/DirectedGraph.hs)
- * [Dfs](https://github.com/TheAlgorithms/Haskell/blob/master/src/Graph/Dfs.hs)
-
-## SpecializedStructure
- * [Merge-Find Set](https://github.com/TheAlgorithms/Haskell/blob/master/src/SpecializedStructure/MergeFindSet.hs)
-
- ## Data Structures
- * [Max Heap](https://github.com/TheAlgorithms/Haskell/blob/master/src/DataStructures/MaxHeap.hs)
-
- ## Misc
- * [Binary Search](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/BinarySearch.hs)
- * [NQueens](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/NQueens.hs)
- * [Powerset](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/Powerset.hs)
- * [TowersOfHanoi](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/TowersOfHanoi.hs)
+## Src
+  * Binarytree
+    * [Binarysearchtree](https://github.com/TheAlgorithms/Haskell/blob/master/src/BinaryTree/BinarySearchTree.hs)
+    * [Binarytree](https://github.com/TheAlgorithms/Haskell/blob/master/src/BinaryTree/BinaryTree.hs)
+  * Datastructures
+    * [Maxheap](https://github.com/TheAlgorithms/Haskell/blob/master/src/DataStructures/MaxHeap.hs)
+  * Graph
+    * [Dfs](https://github.com/TheAlgorithms/Haskell/blob/master/src/Graph/Dfs.hs)
+    * [Directedgraph](https://github.com/TheAlgorithms/Haskell/blob/master/src/Graph/DirectedGraph.hs)
+  * [Haskellalgorithms](https://github.com/TheAlgorithms/Haskell/blob/master/src/HaskellAlgorithms.hs)
+  * Maths
+    * [Graphdist](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths/GraphDist.hs)
+    * [Palindrome](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths/Palindrome.hs)
+  * Misc
+    * [Binarysearch](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/BinarySearch.hs)
+    * [Nqueens](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/NQueens.hs)
+    * [Powerset](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/Powerset.hs)
+    * [Towersofhanoi](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/TowersOfHanoi.hs)
+  * Projecteuler
+    * Problem1
+      * [Problem1](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem1/Problem1.hs)
+    * Problem2
+      * [Problem2](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem2/Problem2.hs)
+    * Problem3
+      * [Problem3](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem3/Problem3.hs)
+    * Problem4
+      * [Problem4](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem4/Problem4.hs)
+    * Problem5
+      * [Problem5](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem5/Problem5.hs)
+    * Problem6
+      * [Problem6](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem6/Problem6.hs)
+    * Problem7
+      * [Problem7](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem7/Problem7.hs)
+  * Robotics
+    * Complementaryfilter
+      * [Compfilt](https://github.com/TheAlgorithms/Haskell/blob/master/src/Robotics/ComplementaryFilter/CompFilt.hs)
+      * [Testdata](https://github.com/TheAlgorithms/Haskell/blob/master/src/Robotics/ComplementaryFilter/TestData.hs)
+  * Sorts
+    * [Bubblesort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/BubbleSort.hs)
+    * [Heapsort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/HeapSort.hs)
+    * [Insertionsort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/InsertionSort.hs)
+    * [Mergesort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/MergeSort.hs)
+    * [Quicksort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/QuickSort.hs)
+    * [Selectionsort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/SelectionSort.hs)
+    * [Shellsort](https://github.com/TheAlgorithms/Haskell/blob/master/src/Sorts/ShellSort.hs)
+  * Specializedstructure
+    * [Mergefindset](https://github.com/TheAlgorithms/Haskell/blob/master/src/SpecializedStructure/MergeFindSet.hs)
+  * Statistics
+    * [Center](https://github.com/TheAlgorithms/Haskell/blob/master/src/Statistics/Center.hs)
+    * [Dispersion](https://github.com/TheAlgorithms/Haskell/blob/master/src/Statistics/Dispersion.hs)
