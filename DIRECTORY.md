@@ -24,7 +24,10 @@
     * [Directedgraph](https://github.com/TheAlgorithms/Haskell/blob/master/src/Graph/DirectedGraph.hs)
   * [Haskellalgorithms](https://github.com/TheAlgorithms/Haskell/blob/master/src/HaskellAlgorithms.hs)
   * Maths
+    * [Factorial](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths/Factorial.hs)
+    * [Fibonacci](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths/Fibonacci.hs)
     * [Graphdist](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths/GraphDist.hs)
+    * [Kadanealgorithm](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths/KadaneAlgorithm.hs)
     * [Palindrome](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths/Palindrome.hs)
   * Misc
     * [Binarysearch](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/BinarySearch.hs)
