@@ -34,21 +34,6 @@
     * [Nqueens](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/NQueens.hs)
     * [Powerset](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/Powerset.hs)
     * [Towersofhanoi](https://github.com/TheAlgorithms/Haskell/blob/master/src/Misc/TowersOfHanoi.hs)
-  * Projecteuler
-    * Problem1
-      * [Problem1](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem1/Problem1.hs)
-    * Problem2
-      * [Problem2](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem2/Problem2.hs)
-    * Problem3
-      * [Problem3](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem3/Problem3.hs)
-    * Problem4
-      * [Problem4](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem4/Problem4.hs)
-    * Problem5
-      * [Problem5](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem5/Problem5.hs)
-    * Problem6
-      * [Problem6](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem6/Problem6.hs)
-    * Problem7
-      * [Problem7](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem7/Problem7.hs)
   * Robotics
     * Complementaryfilter
       * [Compfilt](https://github.com/TheAlgorithms/Haskell/blob/master/src/Robotics/ComplementaryFilter/CompFilt.hs)
