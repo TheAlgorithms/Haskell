@@ -28,3 +28,15 @@ pointSort :: (Ord a) => [[a]] -> Int -> [[a]]
 pointSort [] _ = []
 pointSort [x] _ = [x]
 pointSort ps axis = map (\(P p axis) -> p) (sort (map (\p -> P p axis) ps))
+
+-- Add a point to a k-d tree
+addPoint :: (Ord a) => [a] -> KDTree a -> KDTree a
+addPoint p tree = addPoint' p tree 0 (length p) 
+
+-- Recursive helper function for add point
+addPoint' :: (Ord a) => [a] -> KDTree a -> Int -> Int -> KDTree a
+addPoint' p Empty _ _ = Node p Empty Empty
+addPoint' p (Node root l r) d k
+    | (P p axis) < (P root axis) = Node root (addPoint' p l (d+1) k) r
+    | otherwise =  Node root l (addPoint' p r (d+1) k)
+    where axis = d `mod` k
