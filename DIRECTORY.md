@@ -18,6 +18,7 @@
     * [Binarysearchtree](https://github.com/TheAlgorithms/Haskell/blob/master/src/BinaryTree/BinarySearchTree.hs)
     * [Binarytree](https://github.com/TheAlgorithms/Haskell/blob/master/src/BinaryTree/BinaryTree.hs)
   * Datastructures
+    * [Kdtree](https://github.com/TheAlgorithms/Haskell/blob/master/src/DataStructures/KDTree.hs)
     * [Maxheap](https://github.com/TheAlgorithms/Haskell/blob/master/src/DataStructures/MaxHeap.hs)
   * Graph
     * [Dfs](https://github.com/TheAlgorithms/Haskell/blob/master/src/Graph/Dfs.hs)
