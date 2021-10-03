@@ -56,6 +56,36 @@ removePoint' p (Node root l r) d k
     | otherwise =  Node root l (removePoint' p r (d+1) k)
     where axis = d `mod` k
 
+-- Given a k-d tree, return the set of all points on the tree
 pointSet :: (Ord a) => KDTree a -> [[a]]
 pointSet Empty = []
 pointSet (Node root l r) = root : pointSet l ++ pointSet r
+
+-- Find the point on the given k-d tree which is closest to the given point
+-- Return nothing if the tree is empty
+nnSearch :: (Num a, Ord a) => [a] -> KDTree a -> Maybe [a]
+nnSearch p tree = nnSearch' p tree 0 (length p)
+
+-- Recursive helper function for nnSearch
+nnSearch' :: (Num a, Ord a) => [a] -> KDTree a -> Int -> Int -> Maybe [a]
+nnSearch' _ Empty _ _ = Nothing
+nnSearch' _ (Node root Empty Empty) _ _ = Just root
+nnSearch' p (Node root l r) d k = 
+    let axis = d `mod` k
+        (next, other) = if P p axis < P root axis then (l, r) else (r, l)
+        nextBest = nnSearch' p next (d+1) k
+        best = case nextBest of
+            Just nb -> if sqrDist p nb < sqrDist p root then nb else root
+            Nothing -> root
+        otherBest = 
+            if (p!!axis - root!!axis) * (p!!axis - root!!axis) < sqrDist p best then 
+                nnSearch' p other (d+1) k 
+            else 
+                Nothing
+        in case otherBest of
+            Just ob -> if sqrDist p ob < sqrDist p best then Just ob else Just best
+            Nothing -> Just best
+
+-- Compute squared distance between two points
+sqrDist :: (Num a) => [a] -> [a] -> a
+sqrDist x y = sum [(b - a) * (b - a) | (a,b) <- zip x y]
