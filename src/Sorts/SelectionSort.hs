@@ -18,6 +18,7 @@ leastUnsorted (x:xs) =
     let (y, ys) = leastUnsorted xs
     in if x <= y then (x, xs) else (y, x:ys)
 
+main :: IO ()
 main = do
     putStrLn $ "Unsorted: " ++ show listToSort
     putStrLn $ "Sorted: " ++ show (selectionSort listToSort)

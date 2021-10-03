@@ -1,5 +1,7 @@
 module BinaryTree.BinarySearchTree where
 
+import Prelude hiding (elem)
+
 data BTree a = Empty | Node a (BTree a) (BTree a) deriving (Show)
 data Side = LeftSide | RightSide deriving (Eq, Show)
 
@@ -12,7 +14,7 @@ nodeKey (Node x _ _) = Just x
 -- Cormen, Thomas H., et al. Introduction to algorithms.  pg. 288, MIT press, 2009.
 inorderWalk :: (Eq a, Ord a) => BTree a -> [a]
 inorderWalk Empty = []
-inorderWalk (Node x l r) = (inorderWalk l) ++ [x] ++ (inorderWalk r)
+inorderWalk (Node x l r) = inorderWalk l ++ [x] ++ inorderWalk r
 
 -- Function to insert a value into the tree. Returns the new tree.
 -- Cormen, Thomas H., et al. Introduction to algorithms.  pg. 294, MIT press, 2009.
@@ -26,21 +28,22 @@ bstInsert (Node x l r) z
 bstMax :: (Eq a, Ord a) => BTree a -> Maybe a
 bstMax Empty = Nothing
 bstMax (Node x Empty Empty) = Just x
-bstMax (Node x l Empty) = Just x
-bstMax (Node x l r) = bstMax r
+bstMax (Node x _ Empty) = Just x
+bstMax (Node _ _ r) = bstMax r
 
 -- Function to find the minimum value in the BST.
 bstMin :: (Eq a, Ord a) => BTree a -> Maybe a
 bstMin Empty = Nothing
 bstMin (Node x Empty Empty) = Just x
-bstMin (Node x Empty r) = Just x
-bstMin (Node x l r) = bstMin l
+bstMin (Node x Empty _) = Just x
+bstMin (Node _ l _) = bstMin l
 
 -- Function to build BST from a list of values using a fold.
 bstFromList :: (Eq a, Ord a) => [a] -> BTree a
 bstFromList [] = Empty
-bstFromList lst = foldl (\tree elem -> bstInsert tree elem) Empty lst
+bstFromList lst = foldl bstInsert Empty lst
 
+sampleTree :: (Eq a, Ord a, Num a) => BTree a
 sampleTree = bstFromList [10, 7, 3, 11, 12, 1, 3, 2]
 
 -- Function to check if a given tree is a Binary Search Tree.
@@ -51,7 +54,7 @@ sampleTree = bstFromList [10, 7, 3, 11, 12, 1, 3, 2]
 --     Cormen, Thomas H., et al. Introduction to algorithms. MIT press, 2009.
 isBST :: (Ord a, Eq a) => BTree a -> Bool
 isBST Empty = True
-isBST (Node x Empty Empty) = True
-isBST (Node x Empty r) = (x < (nkey r)) && (isBST r) where nkey = (\(Node n ll rr) -> n)
-isBST (Node x l Empty) = (x >= (nkey l)) && (isBST l) where nkey = (\(Node n ll rr) -> n)
-isBST (Node x l r) = (x >= (nkey l)) && (x < (nkey r)) && (isBST l) && (isBST r) where nkey = (\(Node n ll rr) -> n)
+isBST (Node _ Empty Empty) = True
+isBST (Node x Empty r) = (x < (nkey r)) && (isBST r) where nkey = (\(Node n _ _) -> n)
+isBST (Node x l Empty) = (x >= (nkey l)) && (isBST l) where nkey = (\(Node n _ _) -> n)
+isBST (Node x l r) = (x >= (nkey l)) && (x < (nkey r)) && (isBST l) && (isBST r) where nkey = (\(Node n _ _) -> n)

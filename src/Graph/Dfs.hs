@@ -1,6 +1,7 @@
 module Graph.Dfs where
 
 import Data.List
+import Prelude hiding (odd, even)
 
 type Node = Int
 type Edge = (Node,Node)

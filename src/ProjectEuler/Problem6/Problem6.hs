@@ -9,4 +9,4 @@ squareSum = (^2) . sum
 main :: IO ()
 main = do
     let l = [1..100]
-    putStrLn $ show $ (squareSum l) - (sumSquare l)
+    print $ squareSum l - sumSquare l
