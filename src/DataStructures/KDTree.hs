@@ -27,16 +27,35 @@ kdtree' ps k depth = let axis = (depth `mod` k)
 pointSort :: (Ord a) => [[a]] -> Int -> [[a]]
 pointSort [] _ = []
 pointSort [x] _ = [x]
-pointSort ps axis = map (\(P p axis) -> p) (sort (map (\p -> P p axis) ps))
+pointSort ps axis = map (\(P p _) -> p) (sort (map (`P` axis) ps))
 
 -- Add a point to a k-d tree
 addPoint :: (Ord a) => [a] -> KDTree a -> KDTree a
-addPoint p tree = addPoint' p tree 0 (length p) 
+addPoint p tree = addPoint' p tree 0 (length p)
 
--- Recursive helper function for add point
+-- Recursive helper function for addPoint
 addPoint' :: (Ord a) => [a] -> KDTree a -> Int -> Int -> KDTree a
 addPoint' p Empty _ _ = Node p Empty Empty
 addPoint' p (Node root l r) d k
-    | (P p axis) < (P root axis) = Node root (addPoint' p l (d+1) k) r
-    | otherwise =  Node root l (addPoint' p r (d+1) k)
+    | P p axis < P root axis = Node root (addPoint' p l (d+1) k) r
+    | otherwise = Node root l (addPoint' p r (d+1) k)
     where axis = d `mod` k
+
+-- Remove a point from a k-d tree
+-- First, traverse the tree until the targeted point is found. Then, replace this node with a new tree,
+-- formed from the set of all children of the removed node.
+removePoint :: (Ord a) => [a] -> KDTree a -> KDTree a
+removePoint p tree = removePoint' p tree 0 (length p)
+
+-- Recursive helper function for removePoint
+removePoint' :: (Ord a) => [a] -> KDTree a -> Int -> Int -> KDTree a
+removePoint' _ Empty _ _ = Empty
+removePoint' p (Node root l r) d k
+    | p == root = kdtree (pointSet l ++ pointSet r)
+    | P p axis < P root axis = Node root (removePoint' p l (d+1) k) r
+    | otherwise =  Node root l (removePoint' p r (d+1) k)
+    where axis = d `mod` k
+
+pointSet :: (Ord a) => KDTree a -> [[a]]
+pointSet Empty = []
+pointSet (Node root l r) = root : pointSet l ++ pointSet r
