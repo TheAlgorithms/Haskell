@@ -24,6 +24,7 @@
     * [Directedgraph](https://github.com/TheAlgorithms/Haskell/blob/master/src/Graph/DirectedGraph.hs)
   * [Haskellalgorithms](https://github.com/TheAlgorithms/Haskell/blob/master/src/HaskellAlgorithms.hs)
   * Maths
+    * [Euclidianalgorithm](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths/EuclidianAlgorithm.hs)
     * [Factorial](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths/Factorial.hs)
     * [Fibonacci](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths/Fibonacci.hs)
     * [Graphdist](https://github.com/TheAlgorithms/Haskell/blob/master/src/Maths/GraphDist.hs)
