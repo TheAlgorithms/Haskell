@@ -7,5 +7,6 @@ isPalindrome i =
       back = take (length strInt `div` 2)  $ reverse strInt
   in front == back
 
+main :: IO ()
 main = do
   print $ maximum [i * j | i <- [100..999], j <- [100..999], isPalindrome (i * j)]

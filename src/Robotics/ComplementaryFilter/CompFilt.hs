@@ -21,26 +21,27 @@ getAccel s = if length s >= 6
 
 -- Extract gyro data from a lsit of floats
 getGyro :: (RealFloat a) => [a] -> (a, a, a)
-getGyro s = if length s >= 6 
+getGyro s = if length s >= 6
                then (s!!3, s!!4, s!!5)
                else (0, 0, 0)
 
 -- Function to calculate tilt angle from accelerometer reading.
 -- By default the tilt measurement is made around the Z axis.
 accelTiltAngle :: (RealFloat a) => (a, a, a) -> a
-accelTiltAngle (_, y, z) = (atan2 z y)*180.0/pi
+accelTiltAngle (_, y, z) = atan2 z y * 180.0/pi
 
 
 -- Complementary filter, uses the scanl pattern.
 compFilt :: (RealFloat a) => [a] -> [a] -> a -> a -> [a]
-compFilt ωs θ_accs α δt = scanl (\θ (ω, θ_acc) -> α*(θ + ω*δt) + (1-α)*θ_acc) 
+compFilt ωs θ_accs α δt = scanl (\θ (ω, θ_acc) -> α*(θ + ω*δt) + (1-α)*θ_acc)
                                 (head θ_accs)
                                 (zip ωs θ_accs)
 
 -- Calculate tilts
 calcTilt :: (RealFloat a) => [(a, a, a)] -> [(a, a, a)] -> a -> a -> [a]
-calcTilt accel gyro α δt = compFilt (map getX gyro) (map accelTiltAngle accel) α δt
+calcTilt accel gyro = compFilt (map getX gyro) (map accelTiltAngle accel)
 
+main :: IO ()
 main = do
     let accels = map getAccel testData
     let gyros  = map getGyro testData
