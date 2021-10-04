@@ -14,6 +14,16 @@ inorderWalk :: (Eq a, Ord a) => BTree a -> [a]
 inorderWalk Empty = []
 inorderWalk (Node x l r) = (inorderWalk l) ++ [x] ++ (inorderWalk r)
 
+-- Perform preorder walk of the binary search tree
+preorderWalk :: (Eq a, Ord a) => BTree a -> [a]
+preorderWalk Empty = []
+preorderWalk (Node x l r) = [x] ++ preorderWalk l ++ preorderWalk r
+
+-- Perform postorder walk of the binary search tree
+postorderWalk :: (Eq a, Ord a) => BTree a -> [a]
+postorderWalk Empty = []
+postorderWalk (Node x l r) = preorderWalk l ++ preorderWalk r ++ [x]
+
 -- Function to insert a value into the tree. Returns the new tree.
 -- Cormen, Thomas H., et al. Introduction to algorithms.  pg. 294, MIT press, 2009.
 bstInsert :: (Eq a, Ord a) => BTree a -> a -> BTree a
@@ -55,3 +65,11 @@ isBST (Node x Empty Empty) = True
 isBST (Node x Empty r) = (x < (nkey r)) && (isBST r) where nkey = (\(Node n ll rr) -> n)
 isBST (Node x l Empty) = (x >= (nkey l)) && (isBST l) where nkey = (\(Node n ll rr) -> n)
 isBST (Node x l r) = (x >= (nkey l)) && (x < (nkey r)) && (isBST l) && (isBST r) where nkey = (\(Node n ll rr) -> n)
+
+isElementInBST :: (Ord a, Eq a) => BTree a -> a -> Bool
+isElementInBST Empty _ = False
+isElementInBST (Node x l r) ele = 
+    x == ele ||
+    if x < ele 
+        then isElementInBST r ele
+        else isElementInBST l ele
