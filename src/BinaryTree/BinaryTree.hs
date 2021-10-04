@@ -84,11 +84,12 @@ isSymmetric :: (Eq a) => BTree a -> Bool
 isSymmetric (Node _ l r) = l == r
 
 -- Get sum of all elements in tree
-sumTree :: (Ord a, Eq a) => BTree a -> Int
+sumTree :: BTree Int -> Int
+sumTree Empty = 0
 sumTree (Node x l r) = x + sumTree l + sumTree r 
 
 -- Get an array of leaf nodes in a binary tree
-getLeafNodes :: (Show a) => BTree a -> [a]
+getLeafNodes :: (Eq a, Show a) => BTree a -> [a]
 getLeafNodes Empty = []
 getLeafNodes (Node x l r)
     | l == Empty && r == Empty = [x]
