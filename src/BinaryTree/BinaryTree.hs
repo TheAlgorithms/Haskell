@@ -2,7 +2,7 @@ module BinaryTree.BinaryTree where
 
 import qualified Data.List as L
 
-data BTree a = Empty | Node a (BTree a) (BTree a) deriving (Show)
+data BTree a = Empty | Node a (BTree a) (BTree a) deriving (Show, Eq)
 data Side = LeftSide | RightSide deriving (Eq, Show)
 
 -- Get subtree on specified side
@@ -69,3 +69,27 @@ numNodes t = length $ bfsList t
 simplePrint :: (Show a) => BTree a -> String
 simplePrint Empty = ""
 simplePrint t = (nodeShow t) ++ " " ++ (simplePrint $ getLeftTree t) ++ (simplePrint $ getRightTree t)
+
+-- Find count of element occurrence in binary tree
+elementCountInTree :: (Ord a, Eq a) => BTree a -> a -> Int
+elementCountInTree Empty _ = 0
+elementCountInTree (Node x l r) ele =
+    (if ele == x then 1 else 0) + 
+    elementCountInTree l ele    +
+    elementCountInTree r ele
+
+-- Find whether tree is symmetric at root
+-- Uses Haskell Eq instance to compare BTree datatype
+isSymmetric :: (Eq a) => BTree a -> Bool
+isSymmetric (Node _ l r) = l == r
+
+-- Get sum of all elements in tree
+sumTree :: (Ord a, Eq a) => BTree a -> Int
+sumTree (Node x l r) = x + sumTree l + sumTree r 
+
+-- Get an array of leaf nodes in a binary tree
+getLeafNodes :: (Show a) => BTree a -> [a]
+getLeafNodes Empty = []
+getLeafNodes (Node x l r)
+    | l == Empty && r == Empty = [x]
+    | otherwise = getLeafNodes l ++ getLeafNodes r
