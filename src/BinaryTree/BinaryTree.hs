@@ -81,6 +81,7 @@ elementCountInTree (Node x l r) ele =
 -- Find whether tree is symmetric at root
 -- Uses Haskell Eq instance to compare BTree datatype
 isSymmetric :: (Eq a) => BTree a -> Bool
+isSymmetric Empty = True
 isSymmetric (Node _ l r) = l == r
 
 -- Get sum of all elements in tree
