@@ -49,6 +49,8 @@
       * [Problem6](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem6/Problem6.hs)
     * Problem7
       * [Problem7](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem7/Problem7.hs)
+    * Problem9
+      * [Problem9](https://github.com/TheAlgorithms/Haskell/blob/master/src/ProjectEuler/Problem9/Problem9.hs)
   * Robotics
     * Complementaryfilter
       * [Compfilt](https://github.com/TheAlgorithms/Haskell/blob/master/src/Robotics/ComplementaryFilter/CompFilt.hs)
