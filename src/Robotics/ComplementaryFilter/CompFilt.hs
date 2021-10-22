@@ -41,6 +41,7 @@ compFilt ωs θ_accs α δt = scanl (\θ (ω, θ_acc) -> α*(θ + ω*δt) + (1-�
 calcTilt :: (RealFloat a) => [(a, a, a)] -> [(a, a, a)] -> a -> a -> [a]
 calcTilt accel gyro α δt = compFilt (map getX gyro) (map accelTiltAngle accel) α δt
 
+main :: IO ()
 main = do
     let accels = map getAccel testData
     let gyros  = map getGyro testData

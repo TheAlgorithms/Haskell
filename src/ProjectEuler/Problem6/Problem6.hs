@@ -1,10 +1,13 @@
 module ProjectEuler.Problem6.Problem6 where
 
+square :: Integer -> Integer
+square x = x * x
+
 sumSquare :: [Integer] -> Integer
-sumSquare = sum . map (^2)
+sumSquare = sum . map square
 
 squareSum :: [Integer] -> Integer
-squareSum = (^2) . sum
+squareSum = square . sum
 
 main :: IO ()
 main = do

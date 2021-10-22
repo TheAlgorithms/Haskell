@@ -6,9 +6,9 @@ bsWithIndex list n i
     | len == 1              = Nothing   -- only candidate in list is not the right elem
     | n < head ys           = bsWithIndex xs n i
     | otherwise             = bsWithIndex ys n (i + half)
-    where 
+    where
         len         = length list
-        half        = len `div` 2 
+        half        = len `div` 2
         (xs, ys)    = splitAt half list
 
 bs :: (Ord a) => [a] -> a -> Int
@@ -18,6 +18,6 @@ bs list n = case bsWithIndex list n 0 of
 
 main :: IO ()
 main = do
-    let intList = [1,4,7,10,25,30]
+    let intList = [1,4,7,10,25,30] :: [Int]
     print $ bs intList 29  -- 29 -> -1 as not in list
     print $ bs intList 7   --  7 ->  2 as in list

@@ -26,21 +26,22 @@ bstInsert (Node x l r) z
 bstMax :: (Eq a, Ord a) => BTree a -> Maybe a
 bstMax Empty = Nothing
 bstMax (Node x Empty Empty) = Just x
-bstMax (Node x l Empty) = Just x
-bstMax (Node x l r) = bstMax r
+bstMax (Node x _ Empty) = Just x
+bstMax (Node _ _ r) = bstMax r
 
 -- Function to find the minimum value in the BST.
 bstMin :: (Eq a, Ord a) => BTree a -> Maybe a
 bstMin Empty = Nothing
 bstMin (Node x Empty Empty) = Just x
-bstMin (Node x Empty r) = Just x
-bstMin (Node x l r) = bstMin l
+bstMin (Node x Empty _) = Just x
+bstMin (Node _ l _) = bstMin l
 
 -- Function to build BST from a list of values using a fold.
 bstFromList :: (Eq a, Ord a) => [a] -> BTree a
 bstFromList [] = Empty
-bstFromList lst = foldl (\tree elem -> bstInsert tree elem) Empty lst
+bstFromList lst = foldl (\tree value -> bstInsert tree value) Empty lst
 
+sampleTree :: BTree Int
 sampleTree = bstFromList [10, 7, 3, 11, 12, 1, 3, 2]
 
 -- Function to check if a given tree is a Binary Search Tree.
@@ -51,7 +52,7 @@ sampleTree = bstFromList [10, 7, 3, 11, 12, 1, 3, 2]
 --     Cormen, Thomas H., et al. Introduction to algorithms. MIT press, 2009.
 isBST :: (Ord a, Eq a) => BTree a -> Bool
 isBST Empty = True
-isBST (Node x Empty Empty) = True
-isBST (Node x Empty r) = (x < (nkey r)) && (isBST r) where nkey = (\(Node n ll rr) -> n)
-isBST (Node x l Empty) = (x >= (nkey l)) && (isBST l) where nkey = (\(Node n ll rr) -> n)
-isBST (Node x l r) = (x >= (nkey l)) && (x < (nkey r)) && (isBST l) && (isBST r) where nkey = (\(Node n ll rr) -> n)
+isBST (Node _ Empty Empty) = True
+isBST (Node x Empty r@(Node n _ _)) = (x < n) && (isBST r)
+isBST (Node x l@(Node n _ _) Empty) = (x >= n) && (isBST l)
+isBST (Node x l@(Node nl _ _) r@(Node nr _ _)) = (x >= nl) && (x < nr) && (isBST l) && (isBST r)

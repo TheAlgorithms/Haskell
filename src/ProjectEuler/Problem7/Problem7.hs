@@ -2,7 +2,9 @@ module ProjectEuler.Problem7.Problem7 where
 
 primes :: [Integer]
 primes = sieve [2..]
-    where sieve (p:xs) = p : sieve [x | x <- xs, rem x p > 0]
+  where
+    sieve (p:xs) = p : sieve [x | x <- xs, rem x p > 0]
+    sieve [] = error "This should not happen!"
 
 main :: IO ()
 main = do

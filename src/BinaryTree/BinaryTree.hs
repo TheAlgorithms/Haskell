@@ -1,7 +1,5 @@
 module BinaryTree.BinaryTree where
 
-import qualified Data.List as L
-
 data BTree a = Empty | Node a (BTree a) (BTree a) deriving (Show)
 data Side = LeftSide | RightSide deriving (Eq, Show)
 
@@ -33,19 +31,19 @@ dfsList (Node n l r) = [n] ++ (dfsList l) ++ (dfsList r)
 -- Breadth first traversal.
 bfsList :: BTree a -> [a]
 bfsList Empty = []
-bfsList t = concat $ takeWhile (\l -> (length l) > 0) [getLevel i 0 t | i <- [0..]]
+bfsList t = concat $ takeWhile (\l -> (length l) > 0) [getLevel i 0 t | i <- [(0::Int)..]]
 
 -- Get all nodes from a single level in the tree.
 getLevel :: (Num b, Enum b, Eq b) => b -> b -> BTree a -> [a]
 getLevel _ _ Empty = []
-getLevel 0 _ (Node n l r) = [n]
+getLevel 0 _ (Node n _ _) = [n]
 getLevel level i (Node n l r)
     | i == level = [n]
     | otherwise = (getLevel level (i+1) l) ++ (getLevel level (i+1) r)
 
 -- Get a list of lists of nodes in each level
 getLevels :: BTree a -> [[a]]
-getLevels t = takeWhile (\l -> (length l) > 0) [getLevel i 0 t | i <- [0..]]
+getLevels t = takeWhile (\l -> (length l) > 0) [getLevel i 0 t | i <- [(0::Int)..]]
 
 -- Get the depth of the tree
 getDepth :: BTree a -> Int
@@ -58,8 +56,8 @@ fromList lst = fromListInt 0 lst
 -- Internal function to convert list to tree.
 fromListInt :: Int -> [a] -> BTree a
 fromListInt _ [] = Empty
-fromListInt i lst@(x:xs) = Node x (fromListInt (2*i + 1) (drop (i+1) lst)) 
-                                  (fromListInt (2*i + 2) (drop (i+2) lst))
+fromListInt i lst@(x:_) = Node x (fromListInt (2*i + 1) (drop (i+1) lst)) 
+                                 (fromListInt (2*i + 2) (drop (i+2) lst))
 
 -- Count number of nodes in the tree.
 numNodes :: BTree a -> Int

@@ -1,6 +1,4 @@
 module ProjectEuler.Problem1.Problem1 where
 
-solList = filter (\n -> (rem n 5 == 0) || (rem n 3 == 0)) [1..999]
-
-main = do
-    print $ sum solList
+main :: IO ()
+main = print $ sum [x | x <- [(1::Int) .. 999], x `rem` 5 == 0, x `rem` 3 == 0]

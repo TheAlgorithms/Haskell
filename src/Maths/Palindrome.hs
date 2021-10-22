@@ -1,8 +1,8 @@
 module Maths.Palindrome where
 
-palinedrome :: Eq a => [a] -> Bool
-palinedrome xs = (xs == reverse xs)
+palindrome :: Eq a => [a] -> Bool
+palindrome xs = (xs == reverse xs)
 
 main :: IO ()
 main = do
-  print (palinedrome [1, 3, 1])
+  print (palindrome [1::Int, 3, 1])

@@ -83,7 +83,7 @@ rightChild i = 2 * i + 2
 
 -- Index where the parent of the node at the given index should be located
 parent ::  Int -> Int
-parent i = floor (fromIntegral (div (i-1) 2))
+parent i = (i - 1) `div` 2
 
 -- Helper functions to determine which, if any, child nodes are present in the heap for the node at a given index
 hasLeftChild, hasRightChild, hasAnyChild :: [a] -> Int -> Bool
