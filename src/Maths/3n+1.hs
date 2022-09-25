@@ -1,4 +1,6 @@
--- 3n + 1 is also known as the collatz conjecture, hence the function name
+module Maths.Collatz where
+-- 3n + 1 is also known as the collatz conjecture, hence the function/module name
+-- To avoid numbers in the names
 collatz :: Integer -> [Integer]
 collatz n 
     | n < 1 = undefined
